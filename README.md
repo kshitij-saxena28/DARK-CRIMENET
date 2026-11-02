@@ -1,6 +1,6 @@
 # DARK CRIMENET
 
-## AI-Assisted Criminal Network Investigation Intelligence
+**AI-Assisted Criminal Network Investigation Intelligence**
 
 DARK CRIMENET is an **AI-assisted, evidence-backed investigation intelligence platform** for connecting, verifying, analyzing, and understanding information across FIRs and related investigation records.
 
@@ -24,7 +24,7 @@ The system is designed around a simple principle:
 The research paper presents DARK CRIMENET's architecture, methodology, machine-learning experiments, graph-based link prediction, explainable lead ranking, and tamper-evident audit system.
 
 - 📄 **[Read Research Paper (PDF)](DARK-CRIMENET-IEEE-Research-Paper.pdf)**
-- 📄 **[Read Base Research Paper (PDF)](AI-Enabled_Smart_FIR_Drafting_and_Legal_Validation_System.pdf)**
+- 📄 **[Read Base Reference Paper (PDF)](AI-Enabled_Smart_FIR_Drafting_and_Legal_Validation_System.pdf)**
 - 📊 **[View Project Presentation (PPTX)](DARK-CRIMENET-Presentation.pptx)**
 
 **Authors:** Harsh Khandelwal and Kshitij Saxena  
@@ -53,7 +53,7 @@ DARK CRIMENET converts these fragmented records into a **case-scoped investigati
 
 ---
 
-# System Workflow
+## System Workflow
 
 ```text
 FIRs & Investigation Records
@@ -114,9 +114,9 @@ FIRs & Investigation Records
 
 ---
 
-# Core Features
+## Core Features
 
-## 1. FIR & Document Intelligence
+### 1. FIR & Document Intelligence
 
 The platform can ingest multiple types of investigation records, including:
 
@@ -137,7 +137,7 @@ Supported languages include:
 
 ---
 
-## 2. Entity Extraction & Resolution
+### 2. Entity Extraction & Resolution
 
 The system extracts investigation-relevant entities such as:
 
@@ -166,7 +166,7 @@ Candidate matches remain separate from verified identities until reviewed.
 
 ---
 
-## 3. Human-in-the-Loop Verification
+### 3. Human-in-the-Loop Verification
 
 A major design decision is to keep automated predictions separate from verified investigation data.
 
@@ -194,7 +194,7 @@ This prevents an uncertain automated match from silently becoming a verified rel
 
 ---
 
-# Knowledge Graph
+## Knowledge Graph
 
 Verified information is represented as a **case-scoped knowledge graph**.
 
@@ -231,7 +231,7 @@ The system can also surface relationships across multiple FIRs when they share e
 
 ---
 
-# Graph Analytics
+## Graph Analytics
 
 The graph engine provides several analytical capabilities:
 
@@ -251,7 +251,7 @@ These analyses help identify important nodes, communities, paths, and structural
 
 ---
 
-# Timeline Intelligence
+## Timeline Intelligence
 
 Investigation events can be analyzed chronologically to identify:
 
@@ -264,7 +264,7 @@ Investigation events can be analyzed chronologically to identify:
 
 ---
 
-# Geographic Intelligence
+## Geographic Intelligence
 
 Location and movement-related information can be analyzed to identify:
 
@@ -277,7 +277,7 @@ Location and movement-related information can be analyzed to identify:
 
 ---
 
-# Communication & Financial Analysis
+## Communication & Financial Analysis
 
 ### Communication Records
 
@@ -300,7 +300,7 @@ Synthetic financial records can be analyzed to identify:
 
 ---
 
-# AI & Machine Learning
+## AI & Machine Learning
 
 DARK CRIMENET uses a combination of **rule-based intelligence, classical machine learning, and graph algorithms** rather than depending on an LLM for the core workflow.
 
@@ -321,7 +321,26 @@ The architecture prioritizes **inspectability, reproducibility, and evidence-bac
 
 ---
 
-# Explainable Investigation Signals
+## Experimental Results
+
+DARK CRIMENET was evaluated using synthetic and simulated datasets.
+
+| Evaluation | Result |
+|---|---|
+| Entity-context classification accuracy | 99.63% |
+| Entity-context classification macro-F1 | 99.60% |
+| Value-only classification accuracy | 90.56% |
+| Link prediction ROC-AUC | 0.854–0.962 |
+| Common-neighbours ROC-AUC | 0.244–0.292 |
+| Lead ranking AUC (hard network, partial roles) | 0.79 |
+
+The entity-context classifier uses character-level TF-IDF with logistic regression. Link prediction uses a self-supervised logistic regression model with 12 graph-based features.
+
+**Limitations:** These results are based on synthetic or simulated data and should not be interpreted as validated performance on real FIRs.
+
+---
+
+## Explainable Investigation Signals
 
 The platform does not treat an anomaly score or model prediction as a conclusion.
 
@@ -339,7 +358,7 @@ This allows an investigator to understand **why a signal was generated and where
 
 ---
 
-# Investigation Copilot
+## Investigation Copilot
 
 The platform includes a local, source-aware investigation Copilot for working with verified case information.
 
@@ -355,7 +374,7 @@ The Copilot operates within the available case information and does not replace 
 
 ---
 
-# Evidence & Audit
+## Evidence & Audit
 
 DARK CRIMENET treats evidence integrity and auditability as first-class parts of the system.
 
@@ -373,7 +392,7 @@ This creates a traceable connection between investigation information, analytica
 
 ---
 
-# Security
+## Security
 
 The platform includes application-level security controls such as:
 
@@ -392,7 +411,7 @@ The architecture is designed so that investigation data is accessed within the c
 
 ---
 
-# Technology Stack
+## Technology Stack
 
 ### Backend
 
@@ -443,7 +462,7 @@ The frontend is a lightweight single-page application served through the FastAPI
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```text
 CRIMENET/
@@ -481,7 +500,7 @@ Runtime databases, secrets, private keys, generated evidence, and other local st
 
 ---
 
-# Dataset
+## Dataset
 
 Real criminal investigation datasets are difficult to use because of privacy, legal, security, and access restrictions.
 
@@ -508,7 +527,7 @@ The demonstration data is deterministic so that the investigation workflow can b
 
 ---
 
-# Cross-FIR Analysis
+## Cross-FIR Analysis
 
 Multiple FIRs can be loaded into a single investigation workspace.
 
@@ -531,7 +550,7 @@ The objective is **not** to automatically assume that matching records represent
 
 ---
 
-# Multilingual FIR Intelligence
+## Multilingual FIR Intelligence
 
 The document pipeline supports:
 
@@ -556,9 +575,9 @@ Critical identifiers such as names, phone numbers, dates, and case numbers shoul
 
 ---
 
-# Running the Project
+## Running the Project
 
-## Windows
+### Windows
 
 The simplest option is:
 
@@ -601,7 +620,7 @@ http://localhost:8000
 
 ---
 
-## Docker
+### Docker
 
 Create the environment file:
 
@@ -623,7 +642,7 @@ http://localhost:8000
 
 ---
 
-# OCR Setup
+## OCR Setup
 
 For local installations, Tesseract OCR and the required language data should be installed.
 
@@ -651,7 +670,7 @@ The Docker environment provides the required OCR resources automatically.
 
 ---
 
-# Demo Environment
+## Demo Environment
 
 The bundled synthetic dataset can be initialized with:
 
@@ -663,7 +682,7 @@ The generated environment is intended for demonstration and testing.
 
 ---
 
-# Responsible Use
+## Responsible Use
 
 DARK CRIMENET is designed as an **investigation decision-support system**, not an autonomous decision-maker.
 
@@ -680,7 +699,7 @@ Any real-world deployment would require appropriate legal authorization, privacy
 
 ---
 
-# Limitations
+## Limitations
 
 This project is a research and development prototype.
 
@@ -697,7 +716,7 @@ Important limitations include:
 
 ---
 
-# Why This Architecture
+## Why This Architecture
 
 The project is intentionally built as more than an isolated ML model.
 
@@ -729,7 +748,7 @@ This architecture allows the individual AI and data components to contribute to 
 
 ---
 
-# Research Basis
+## Research Basis
 
 DARK CRIMENET builds upon research in automated FIR processing, natural language processing, and criminal investigation intelligence.
 
@@ -761,7 +780,7 @@ DARK CRIMENET extends that FIR-focused problem toward investigation intelligence
 
 ---
 
-# Project Status
+## Project Status
 
 **Current release:** `v5.3.0`
 
@@ -794,7 +813,7 @@ Detailed implementation history is maintained in `RELEASE_NOTES.md`.
 
 ---
 
-# Disclaimer
+## Disclaimer
 
 DARK CRIMENET is a research and development prototype.
 
