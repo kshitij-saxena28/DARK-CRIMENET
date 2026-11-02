@@ -19,6 +19,21 @@ The system is designed around a simple principle:
 
 ---
 
+## Research Paper & Presentation
+
+The research paper presents DARK CRIMENET's architecture, methodology, machine-learning experiments, graph-based link prediction, explainable lead ranking, and tamper-evident audit system.
+
+- 📄 **[Read Research Paper (PDF)](DARK-CRIMENET-IEEE-Research-Paper.pdf)**
+- 📄 **[Read Base Research Paper (PDF)](AI-Enabled_Smart_FIR_Drafting_and_Legal_Validation_System.pdf)**
+- 📊 **[View Project Presentation (PPTX)](DARK-CRIMENET-Presentation.pptx)**
+
+**Authors:** Harsh Khandelwal and Kshitij Saxena  
+**Institution:** Bennett University, Greater Noida, India
+
+**Note:** Experimental results are based on synthetic and simulated datasets.
+
+---
+
 ## What It Solves
 
 Investigation information is often distributed across FIRs, documents, communication records, financial records, vehicles, locations, and other sources.
@@ -716,7 +731,17 @@ This architecture allows the individual AI and data components to contribute to 
 
 # Research Basis
 
-The project builds on the problem area explored in:
+DARK CRIMENET builds upon research in automated FIR processing, natural language processing, and criminal investigation intelligence.
+
+### Reference Research Paper
+
+**Mathivanan P. et al. — "AI-Enabled Smart FIR Drafting and Legal Validation System"**
+
+Published in the 2026 International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA).
+
+**[Read Reference Paper on IEEE Xplore](https://doi.org/10.1109/AIMLA67915.2026.11522503)**
+
+Unlike FIR drafting systems, DARK CRIMENET focuses on analyzing existing FIRs to discover relationships, identify potential missing links, prioritize investigative leads, and maintain tamper-evident records.
 
 **“AI-Enabled Smart FIR Drafting and Legal Validation System”**
 
